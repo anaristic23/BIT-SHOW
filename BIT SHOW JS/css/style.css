@@ -1,0 +1,16 @@
+nav, footer {
+  background-color: #343a40;
+  color: whitesmoke; }
+
+footer {
+  bottom: 0;
+  width: 100%;
+  padding: 20px; }
+  footer p {
+    text-align: center; }
+
+h1 {
+  text-align: center;
+  padding: 10px; }
+
+/*# sourceMappingURL=style.css.map */

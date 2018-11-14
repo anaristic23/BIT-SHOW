@@ -1,0 +1,22 @@
+$mainColor : #343a40;
+
+
+nav, footer {
+    background-color: $mainColor;
+    color: whitesmoke;
+}
+
+footer {
+
+    bottom : 0;
+    width: 100%;
+    padding: 20px;
+    p {
+        text-align: center;
+    }
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
