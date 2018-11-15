@@ -20,3 +20,18 @@ h1 {
     text-align: center;
     padding: 10px;
 }
+.form-results{
+    position: relative;
+    .search-ul{
+        display: none;
+        background-color: white;
+        width: 20%;
+          position: absolute;
+          right: 10%;
+          top: -5px;
+          li{
+              list-style-type: none;
+          }
+    }
+
+}

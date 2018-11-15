@@ -6,7 +6,7 @@ const fetchPopularShows = (doSomething) => {
     const request = $.ajax("http://api.tvmaze.com/shows");
 
     request.done(function (shows) {
-        console.log("podaci ucitani: ", shows);
+        // console.log("podaci ucitani: ", shows);
 
         // const listOfShows = [];
         // for (let index = 0; index < shows.length; index++) {
@@ -32,18 +32,30 @@ const fetchPopularShows = (doSomething) => {
 const searchForShows = (name, onFinish) => {
     const response = $.ajax("http://api.tvmaze.com/search/shows?q=" + name);
 
-    response.done(function (shortList) {
+    response.done(function (listItem) {
 
-        const shortListOfShows = shortList.map(listItem => {
-            const { name } = listItem;
 
-            return new Show(name);
-        })
 
-        onFinish(shortListOfShows.slice(0, 10));
+        const shows = [];
+        console.log(listItem);
+        for (let i = 0; i < listItem.length; i++) {
+            if (listItem[i].show.image == null) {
+                continue;
+            }
+            // console.log("al/o");
+            const name = listItem[i].show.name;
+            const img = listItem[i].show.image.medium;
+            const rating = listItem[i].show.average;
+            shows.push(new Show(name, rating, img));
+        }
+
+        // console.log(shows);
+        onFinish(shows);
     })
 
+
 }
+
 export {
     fetchPopularShows,
     searchForShows

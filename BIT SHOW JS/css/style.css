@@ -13,4 +13,16 @@ h1 {
   text-align: center;
   padding: 10px; }
 
+.form-results {
+  position: relative; }
+  .form-results .search-ul {
+    display: none;
+    background-color: white;
+    width: 20%;
+    position: absolute;
+    right: 10%;
+    top: -5px; }
+    .form-results .search-ul li {
+      list-style-type: none; }
+
 /*# sourceMappingURL=style.css.map */
